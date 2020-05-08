@@ -1,27 +1,27 @@
 # ASD
-  Investigation of miRNA regulation related to Autism spectrum disorder
+Investigation of miRNA regulation related to Autism spectrum disorder
 # Introduction
 MiRNAs (miRNAs) involve in nervous system developmental, and have potential to cause ASD. However, the miRNA  regulation mechanism in ASD is largely unclear. In this work, we present a novel framework to identify miRNA-target networks and modules, miRNA sponge networks and modules for uncovering the pathogenesis of ASD, as well as conduct enrichment analysis.
 # Description of each file
-  DiffExp_lncR.csv: Differentially expressed lncRNAs.
-  DiffExp_miR.csv: Differentially expressed miRNAs.
-  DiffExp_mR.csv: Differentially expressed mRNAs.
-  DiffExp_miR_lncR.csv: Differentially expressed miRNAs and lncRNAs.
-  DiffExp_miR_mR.csv: Differentially expressed miRNAs and mRNAs.
-  miRNA_lncRNA_groundtruth_LncBase_v2.0+NPInter_v4.0.csv: Experimentally validated miRNA-lncRNA interactions from LncBase v2.0 and NPInter v4.0.
-  miRNA_mRNA_groundtruth_miRTarBase_v8.0+TarBase_v8.0.csv: Experimentally validated miRNA-mRNA interactions from miRTarBase v8.0 and TarBase v8.0.
-  promise_validated_miR_lncR_mR_1679.el: The format of el about miRNA-target interactions 
-  raw_Autism.Rdata: ASD expression datasets.
-  t_lncR_Exp_Autism.csv: LncRNA expression profiles of ASD samples.
-  t_lncR_Exp_Normal.csv: LncRNA expression profiles of normal samples.
-  t_miR_Exp_Autism.csv: MiRNA expression profiles of ASD samples.
-  t_miR_Exp_Normal.csv: MiRNA expression profiles of normal samples.
-  t_mR_Exp_Autism.csv: MRNA expression profiles of ASD samples.
-  t_mR_Exp_Normal.csv: MRNA expression profiles of normal samples.
+  DiffExp_lncR.csv: Differentially expressed lncRNAs.<br />
+  DiffExp_miR.csv: Differentially expressed miRNAs.<br />
+  DiffExp_mR.csv: Differentially expressed mRNAs.<br />
+  DiffExp_miR_lncR.csv: Differentially expressed miRNAs and lncRNAs.<br />
+  DiffExp_miR_mR.csv: Differentially expressed miRNAs and mRNAs.<br />
+  miRNA_lncRNA_groundtruth_LncBase_v2.0+NPInter_v4.0.csv: Experimentally validated miRNA-lncRNA interactions from LncBase v2.0 and NPInter v4.0.<br />
+  miRNA_mRNA_groundtruth_miRTarBase_v8.0+TarBase_v8.0.csv: Experimentally validated miRNA-mRNA interactions from miRTarBase v8.0 and TarBase v8.0.<br />
+  promise_validated_miR_lncR_mR_1679.el: The format of el about miRNA-target interactions.<br />
+  raw_Autism.Rdata: ASD expression datasets.<br />
+  t_lncR_Exp_Autism.csv: LncRNA expression profiles of ASD samples.<br />
+  t_lncR_Exp_Normal.csv: LncRNA expression profiles of normal samples.<br />
+  t_miR_Exp_Autism.csv: MiRNA expression profiles of ASD samples.<br />
+  t_miR_Exp_Normal.csv: MiRNA expression profiles of normal samples.<br />
+  t_mR_Exp_Autism.csv: MRNA expression profiles of ASD samples.<br />
+  t_mR_Exp_Normal.csv: MRNA expression profiles of normal samples.<br />
 # The usage of ASD
- Paste all files into a single folder (set the folder as the directory of R environment), the workflow of ASD is implemented in miRNA regulation in ASD.R.
+Paste all files into a single folder (set the folder as the directory of R environment), the workflow of ASD is implemented in miRNA regulation in ASD.R.
 #  Quick example to use ASD
- For investigating miRNA regulation related to ASD, we prepare ASD-related miRNA, lncRNA and mRNA expression profiles. Paste the datasets, run script of quick example version (Quick_examples_ASD.R) and source file (zzz.R) into a single folder (set the folder as the directory of R environment).
+For investigating miRNA regulation related to ASD, we prepare ASD-related miRNA, lncRNA and mRNA expression profiles. Paste the datasets, run script of quick example version (Quick_examples_ASD.R) and source file (zzz.R) into a single folder (set the folder as the directory of R environment).
 ```R
 # Load required R package
 library(miRLAB)
