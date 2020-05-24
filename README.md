@@ -11,7 +11,7 @@ MiRNAs (miRNAs) involve in nervous system developmental, and have potential to c
   miRNA_lncRNA_groundtruth_LncBase_v2.0+NPInter_v4.0.csv: Experimentally validated miRNA-lncRNA interactions from LncBase v2.0 and NPInter v4.0.<br />
   miRNA_mRNA_groundtruth_miRTarBase_v8.0+TarBase_v8.0.csv: Experimentally validated miRNA-mRNA interactions from miRTarBase v8.0 and TarBase v8.0.<br />
   promise_validated_miR_lncR_mR_1679.el: The format of el about miRNA-target interactions.<br />
-  raw_Autism.Rdata: ASD expression datasets.<br />
+  ASD.Rdata: ASD expression datasets.<br />
   t_lncR_Exp_Autism.csv: LncRNA expression profiles of ASD samples.<br />
   t_lncR_Exp_Normal.csv: LncRNA expression profiles of normal samples.<br />
   t_miR_Exp_Autism.csv: MiRNA expression profiles of ASD samples.<br />
