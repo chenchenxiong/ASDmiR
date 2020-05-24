@@ -20,8 +20,8 @@ MiRNAs (miRNAs) involve in nervous system developmental, and have potential to c
   t_mR_Exp_Normal.csv: MRNA expression profiles of normal samples.<br />
 # The usage of ASDmiR
 Paste all files into a single folder (set the folder as the directory of R environment), the workflow of ASDmiR is implemented in ASDmiR.R.
-#  Quick example to use ASD
-For investigating miRNA regulation related to ASD, we prepare ASD-related miRNA, lncRNA and mRNA expression profiles. Paste the datasets, run script of quick example version (Quick_examples_ASDmiR.R) and source file (zzz.R) into a single folder (set the folder as the directory of R environment).
+#  Quick example to use ASDmiR
+For uncovering miRNA regulation related to ASD, we prepare ASD-related miRNA, lncRNA and mRNA expression profiles. Paste the datasets, run script of quick example version (Quick_examples_ASDmiR.R) and source file (zzz.R) into a single folder (set the folder as the directory of R environment).
 ```R
 # Load required R package
 library(miRLAB)
