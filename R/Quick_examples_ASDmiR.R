@@ -6,7 +6,7 @@ library(limma)
 source("zzz.R")
 
 # Load prepared datasets
-raw_Autism <- load("raw_Autism.RData") 
+raw_Autism <- load("ASD.RData") 
 
 # Differentially expressed analysis
 DiffExpAna_miR_lncR<-DiffExpAnalysis("t_miR_Exp_Autism.csv", "t_miR_Exp_Normal.csv", "t_lncR_Exp_Autism.csv", "t_lncR_Exp_Normal.csv", topkmiR = 100, topkmR = 300, p.miR = 1, p.mR = 1)
