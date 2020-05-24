@@ -1,5 +1,5 @@
 # Raw ASD datasets have matched ASD-related expression profiles of 172 miRNAs, 595 lncRNAs, 18114 mRNA, samples have been categorized as ASD (104 samples) and normal (82 samples).
-raw_Autism <- load("raw_Autism.RData") 
+raw_Autism <- load("ASD.RData") 
 
 # To discover differentially expressed miRNAs, lncRNAs and mRNAs between ASD samples and normal samples, differential expression analysis can be used.
 ## we select top 100 miRNAs, top 300 lncRNAs and top 4000 mRNAs that are differentially expressed
