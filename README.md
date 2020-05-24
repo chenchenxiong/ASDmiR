@@ -1,7 +1,7 @@
 # ASDmiR
 ASDmiR: a step-wise method to uncover miRNA regulation related to autism spectrum disorder
 # Introduction
-MiRNAs (miRNAs) involve in nervous system developmental, and have potential to cause ASD. However, the miRNA  regulation mechanism in ASD is largely unclear. In this work, we present a novel framework to identify miRNA-target networks and modules, miRNA sponge networks and modules for uncovering the pathogenesis of ASD, as well as conduct enrichment analysis.
+MiRNAs (miRNAs) involve in nervous system developmental, and have potential to cause ASD. However, the miRNA  regulation mechanism in ASD is largely unclear. In this work, we present a novel framework, ASDmiR, to identify miRNA-target networks and modules, miRNA sponge networks and modules for uncovering the pathogenesis of ASD, as well as conduct enrichment analysis.
 # Description of each file
   DiffExp_lncR.csv: Differentially expressed lncRNAs.<br />
   DiffExp_miR.csv: Differentially expressed miRNAs.<br />
