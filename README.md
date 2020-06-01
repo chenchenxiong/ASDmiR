@@ -8,7 +8,7 @@ MiRNAs (miRNAs) involve in nervous system developmental, and have potential to c
   DiffExp_mR.csv: Differentially expressed mRNAs.<br />
   DiffExp_miR_lncR.csv: Differentially expressed miRNAs and lncRNAs.<br />
   DiffExp_miR_mR.csv: Differentially expressed miRNAs and mRNAs.<br />
-  miRNA_lncRNA_groundtruth_LncBase_v3.0+NPInter_v4.0.csv: Experimentally validated miRNA-lncRNA interactions from LncBase v3.0 and NPInter v4.0.<br />
+  miRNA_lncRNA_groundtruth_LncBase_v2.0+NPInter_v4.0.csv: Experimentally validated miRNA-lncRNA interactions from LncBase v2.0 and NPInter v4.0.<br />
   miRNA_mRNA_groundtruth_miRTarBase_v8.0+TarBase_v8.0.csv: Experimentally validated miRNA-mRNA interactions from miRTarBase v8.0 and TarBase v8.0.<br />
   promise_validated_miR_lncR_mR_1679.el: The format of el about miRNA-target interactions.<br />
   ASD.Rdata: ASD expression datasets.<br />
@@ -62,7 +62,7 @@ colnames(promise_100miR_200mR) = c("miRNA","gene","Correlation")
 
 ## Validation of miRNA-target interactions predicted by ProMISe method
 library(miRLAB)
-promise_miR_lncRtop200_Validated <- Validation(promise_100miR_200lncR, datacsv = "miRNA_lncRNA_groundtruth_lncBase_v2.0+NPInter_v4.0.csv")
+promise_miR_lncRtop200_Validated <- Validation(promise_100miR_200lncR, datacsv = "miRNA_lncRNA_groundtruth_LncBase_v2.0+NPInter_v4.0.csv")
 promise_miR_mRtop200_Validated <- Validation(promise_100miR_200mR, datacsv = "miRNA_mRNA_groundtruth_miRTarBase_v8.0+TarBase_v8.0.csv")
 ##  miRNA-target interactions using ProMISe
 promise_validated_miR_lncR_mR_1679 <- rbind(promise_miR_lncRtop200_Validated[[1]],promise_miR_mRtop200_Validated[[1]])
