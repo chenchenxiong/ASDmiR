@@ -93,15 +93,15 @@ miR_lncR_Experiment_top200 <- experiment_groundtruth(allmethods = miR_lncR_12res
 miR_mR_Experiment_top200 <- experiment_groundtruth(allmethods = miR_mR_12results, topk = 200, Expgroundtruth = "miRNA_mRNA_groundtruth_miRTarBase_v8.0+TarBase_v8.0.csv", LFC=1, downreg = TRUE)
 
 # filter and Compare miRNA-lncRNA interactions
-compare_miR_lncR_top50 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top50, 1)
-compare_miR_lncR_top100 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top100, 1)
-compare_miR_lncR_top150 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top150, 1)
-compare_miR_lncR_top200 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top200, 1)
+compare_miR_lncR_top50 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top50, 0)
+compare_miR_lncR_top100 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top100, 0)
+compare_miR_lncR_top150 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top150, 0)
+compare_miR_lncR_top200 <- filterAndCompare_groundtruth(miR_lncR_Experiment_top200, 0)
 # filter and Compare miRNA-lncRNA interactions 
-compare_miR_mR_top50 <- filterAndCompare_groundtruth(miR_mR_Experiment_top50, 1)
-compare_miR_mR_top100 <- filterAndCompare_groundtruth(miR_mR_Experiment_top100, 1)
-compare_miR_mR_top150 <- filterAndCompare_groundtruth(miR_mR_Experiment_top150, 1)
-compare_miR_mR_top200 <- filterAndCompare_groundtruth(miR_mR_Experiment_top200, 1)
+compare_miR_mR_top50 <- filterAndCompare_groundtruth(miR_mR_Experiment_top50, 0)
+compare_miR_mR_top100 <- filterAndCompare_groundtruth(miR_mR_Experiment_top100, 0)
+compare_miR_mR_top150 <- filterAndCompare_groundtruth(miR_mR_Experiment_top150, 0)
+compare_miR_mR_top200 <- filterAndCompare_groundtruth(miR_mR_Experiment_top200, 0)
 
 
 # Visualization of the results of comparison study on validated miRNA-target interactions
@@ -198,7 +198,7 @@ library(clusterProfiler)
 # Integrate targets of hub miRNAs for enrichment analysis
 miR_target_valid1679_DF <- as.data.frame(promise_validated_miR_lncR_mR_1679)
 hub_target_inter <- data.frame()
-for (n in 1:length(hub_target)) {
+for (n in 1:length(hub_miRNA_target)) {
   temp_tar <- miR_target_valid1679_DF[which(hub_miRNA_target[n]==miR_target_valid1679_DF[1]),]
   hub_target_inter <- rbind(hub_target_inter, temp_tar)
 }
@@ -213,9 +213,9 @@ hub_target_KEGG <- enrichKEGG(entrezID_target$ENTREZID, organism = "hsa",  pvalu
 ## Under different SC cutoffs, we use R square value to evaluate the goodness of power law degree distribution for the identified miRNA sponge interaction network.
 ## R Square of each miRNA sponge network can be obtained by using the Network Analyzer plugin in Cytoscape.
 
-DiffExp_miR <- read.csv("DiffExp_miR.csv", header = FALSE, sep = ",")
-DiffExp_lncR <- read.csv("DiffExp_lncR.csv", header = FALSE, sep = ",")
-DiffExp_mR <- read.csv("DiffExp_mR.csv", header = FALSE, sep = ",")
+DiffExp_miR <- read.csv("DiffExp_miR.csv", header = FALSE, sep = ",", stringsAsFactors = TRUE)
+DiffExp_lncR <- read.csv("DiffExp_lncR.csv", header = FALSE, sep = ",", stringsAsFactors = TRUE)
+DiffExp_mR <- read.csv("DiffExp_mR.csv", header = FALSE, sep = ",", stringsAsFactors = TRUE)
 DEA_miR_mR_lncR <- cbind(DiffExp_miR,DiffExp_lncR, DiffExp_mR)## 186*4400
 
 library(miRspongeR)
@@ -241,7 +241,7 @@ hub_miR_sponge <- names(sort(miR_sponge_graph_degree[which(miR_sponge_graph_degr
 library(clusterProfiler)
 miR_sponge_sppc_0.25_DF <- as.data.frame(miR_sponge_sppc_0.25)
 hub_sponge_inter <- data.frame()
-for (i in 1:length(hub_gene)) {
+for (i in 1:length(hub_miR_sponge)) {
   temp_sponge <- miR_sponge_sppc_0.25_DF[which(hub_miR_sponge[i] == miR_sponge_sppc_0.25_DF[1]),]
   hub_sponge_inter <- rbind(hub_sponge_inter,temp_sponge)
 }
